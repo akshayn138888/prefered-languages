@@ -1,0 +1,18 @@
+<form action="/prefered_language" method = 'POST'>
+    <div>
+        <input type="text" name= "name" value = "<%= name  %> ">
+    </div> 
+    
+    <div>
+        <select name="language" id="language"> 
+            <% for (let language in prefered_languages) { %>
+            <option value="<%= language %> " <% if(language === selected) { %> 
+                selected <% } %>  > <%= prefered_languages[language] %>   </option>
+            <% } %>  
+        </select>
+    </div> 
+    
+    <div>
+        <input type="submit" value = "submit"/>
+    </div>
+</form>
